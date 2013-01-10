@@ -1,0 +1,5 @@
+#Thu Dec 10 22:22:13 WET 2009
+war.name=FullSenseWeb.war
+compiler.style=OBFUSCATED
+server.path=/Users/luis/Desktop
+compiler.memory.max=256m

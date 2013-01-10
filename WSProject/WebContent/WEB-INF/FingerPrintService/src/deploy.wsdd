@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?><!-- Use this file to deploy some handlers/chains and services      --><!-- Two ways to do this:                                           --><!--   java org.apache.axis.client.AdminClient deploy.wsdd          --><!--      after the axis server is running                          --><!-- or                                                             --><!--   java org.apache.axis.utils.Admin client|server deploy.wsdd   --><!--      from the same directory that the Axis engine runs         --><deployment xmlns="http://xml.apache.org/axis/wsdd/" xmlns:java="http://xml.apache.org/axis/wsdd/providers/java">
+
+  <!-- Services from FingerPrintService WSDL service -->
+
+  <service name="FingerPrint" provider="java:RPC" style="wrapped" use="literal">
+      <parameter name="wsdlTargetNamespace" value="http://src"/>
+      <parameter name="wsdlServiceElement" value="FingerPrintService"/>
+      <parameter name="schemaQualified" value="http://src"/>
+      <parameter name="wsdlServicePort" value="FingerPrint"/>
+      <parameter name="className" value="src.FingerPrint"/>
+      <parameter name="wsdlPortType" value="FingerPrint"/>
+      <parameter name="typeMappingVersion" value="1.2"/>
+      <operation xmlns:operNS="http://src" xmlns:retNS="http://src" xmlns:rtns="http://www.w3.org/2001/XMLSchema" name="registEvent" qname="operNS:registEvent" returnQName="retNS:registEventReturn" returnType="rtns:string" soapAction="">
+        <parameter xmlns:pns="http://src" xmlns:tns="http://www.w3.org/2001/XMLSchema" qname="pns:date" type="tns:string"/>
+        <parameter xmlns:pns="http://src" xmlns:tns="http://www.w3.org/2001/XMLSchema" qname="pns:hardwareId" type="tns:string"/>
+        <parameter xmlns:pns="http://src" xmlns:tns="http://www.w3.org/2001/XMLSchema" qname="pns:personId" type="tns:string"/>
+        <parameter xmlns:pns="http://src" xmlns:tns="http://www.w3.org/2001/XMLSchema" qname="pns:eventDescription" type="tns:string"/>
+      </operation>
+      <operation xmlns:operNS="http://src" xmlns:retNS="http://src" xmlns:rtns="http://www.w3.org/2001/XMLSchema" name="verifyAccess" qname="operNS:verifyAccess" returnQName="retNS:verifyAccessReturn" returnType="rtns:string" soapAction="">
+        <parameter xmlns:pns="http://src" xmlns:tns="http://www.w3.org/2001/XMLSchema" qname="pns:hardwareId" type="tns:string"/>
+        <parameter xmlns:pns="http://src" xmlns:tns="http://www.w3.org/2001/XMLSchema" qname="pns:personId" type="tns:string"/>
+      </operation>
+      <operation xmlns:operNS="http://src" xmlns:retNS="http://src" xmlns:rtns="http://www.w3.org/2001/XMLSchema" name="addAccess" qname="operNS:addAccess" returnQName="retNS:addAccessReturn" returnType="rtns:string" soapAction="">
+        <parameter xmlns:pns="http://src" xmlns:tns="http://www.w3.org/2001/XMLSchema" qname="pns:date" type="tns:string"/>
+        <parameter xmlns:pns="http://src" xmlns:tns="http://www.w3.org/2001/XMLSchema" qname="pns:hardwareId" type="tns:string"/>
+        <parameter xmlns:pns="http://src" xmlns:tns="http://www.w3.org/2001/XMLSchema" qname="pns:personId" type="tns:string"/>
+      </operation>
+      <operation xmlns:operNS="http://src" xmlns:retNS="http://src" xmlns:rtns="http://www.w3.org/2001/XMLSchema" name="removeAccess" qname="operNS:removeAccess" returnQName="retNS:removeAccessReturn" returnType="rtns:string" soapAction="">
+        <parameter xmlns:pns="http://src" xmlns:tns="http://www.w3.org/2001/XMLSchema" qname="pns:date" type="tns:string"/>
+        <parameter xmlns:pns="http://src" xmlns:tns="http://www.w3.org/2001/XMLSchema" qname="pns:hardwareId" type="tns:string"/>
+        <parameter xmlns:pns="http://src" xmlns:tns="http://www.w3.org/2001/XMLSchema" qname="pns:personId" type="tns:string"/>
+      </operation>
+      <parameter name="allowedMethods" value="removeAccess addAccess registEvent verifyAccess"/>
+
+  </service>
+</deployment>

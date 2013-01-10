@@ -1,0 +1,12 @@
+<module>
+	<inherits name="com.google.gwt.user.User"/>
+	<inherits name="com.google.gwt.user.theme.standard.Standard"/>
+	<entry-point class="com.fullsystems.fullsense.client.FullSenseWeb"/>
+	<inherits name="com.extjs.gxt.ui.GXT"/>
+	<inherits name="com.fullsystems.fullsense.FullSenseWeb"/>
+	<inherits name="com.fullsystems.fullsense.FullSenseWeb"/>
+	<inherits name="com.fullsystems.fullsense.FullSenseWeb"/>
+	<inherits name="com.fullsystems.fullsense.FullSenseWeb"/>
+	
+	<stylesheet src="FullSense.css" /> 
+</module>

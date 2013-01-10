@@ -1,0 +1,143 @@
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/fullsense.xpdev.svn/!svn/ver/533/FSProjects/FS-beta1/FullSenseEJB/ejbModule/core/entityBeans
+END
+Circle.java
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/fullsense.xpdev.svn/!svn/ver/348/FSProjects/FS-beta1/FullSenseEJB/ejbModule/core/entityBeans/Circle.java
+END
+Protocol.java
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svn/fullsense.xpdev.svn/!svn/ver/305/FSProjects/FS-beta1/FullSenseEJB/ejbModule/core/entityBeans/Protocol.java
+END
+TrackingLog.java
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/svn/fullsense.xpdev.svn/!svn/ver/253/FSProjects/FS-beta1/FullSenseEJB/ejbModule/core/entityBeans/TrackingLog.java
+END
+Rectangle.java
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svn/fullsense.xpdev.svn/!svn/ver/225/FSProjects/FS-beta1/FullSenseEJB/ejbModule/core/entityBeans/Rectangle.java
+END
+PermissionGroup.java
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/svn/fullsense.xpdev.svn/!svn/ver/380/FSProjects/FS-beta1/FullSenseEJB/ejbModule/core/entityBeans/PermissionGroup.java
+END
+StationaryResource.java
+K 25
+svn:wc:ra_dav:version-url
+V 121
+/svn/fullsense.xpdev.svn/!svn/ver/446/FSProjects/FS-beta1/FullSenseEJB/ejbModule/core/entityBeans/StationaryResource.java
+END
+Area.java
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/fullsense.xpdev.svn/!svn/ver/349/FSProjects/FS-beta1/FullSenseEJB/ejbModule/core/entityBeans/Area.java
+END
+Detector.java
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svn/fullsense.xpdev.svn/!svn/ver/389/FSProjects/FS-beta1/FullSenseEJB/ejbModule/core/entityBeans/Detector.java
+END
+SimpleShape.java
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/svn/fullsense.xpdev.svn/!svn/ver/225/FSProjects/FS-beta1/FullSenseEJB/ejbModule/core/entityBeans/SimpleShape.java
+END
+User.java
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/fullsense.xpdev.svn/!svn/ver/417/FSProjects/FS-beta1/FullSenseEJB/ejbModule/core/entityBeans/User.java
+END
+UserIdentifier.java
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/svn/fullsense.xpdev.svn/!svn/ver/309/FSProjects/FS-beta1/FullSenseEJB/ejbModule/core/entityBeans/UserIdentifier.java
+END
+Type.java
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/fullsense.xpdev.svn/!svn/ver/245/FSProjects/FS-beta1/FullSenseEJB/ejbModule/core/entityBeans/Type.java
+END
+Log.java
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/fullsense.xpdev.svn/!svn/ver/225/FSProjects/FS-beta1/FullSenseEJB/ejbModule/core/entityBeans/Log.java
+END
+Identifier.java
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/svn/fullsense.xpdev.svn/!svn/ver/354/FSProjects/FS-beta1/FullSenseEJB/ejbModule/core/entityBeans/Identifier.java
+END
+CompositeShape.java
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/svn/fullsense.xpdev.svn/!svn/ver/228/FSProjects/FS-beta1/FullSenseEJB/ejbModule/core/entityBeans/CompositeShape.java
+END
+SystemLogUser.java
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/svn/fullsense.xpdev.svn/!svn/ver/249/FSProjects/FS-beta1/FullSenseEJB/ejbModule/core/entityBeans/SystemLogUser.java
+END
+SystemLog.java
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svn/fullsense.xpdev.svn/!svn/ver/397/FSProjects/FS-beta1/FullSenseEJB/ejbModule/core/entityBeans/SystemLog.java
+END
+Resource.java
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svn/fullsense.xpdev.svn/!svn/ver/533/FSProjects/FS-beta1/FullSenseEJB/ejbModule/core/entityBeans/Resource.java
+END
+IdentifiableResource.java
+K 25
+svn:wc:ra_dav:version-url
+V 123
+/svn/fullsense.xpdev.svn/!svn/ver/397/FSProjects/FS-beta1/FullSenseEJB/ejbModule/core/entityBeans/IdentifiableResource.java
+END
+Request.java
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/fullsense.xpdev.svn/!svn/ver/522/FSProjects/FS-beta1/FullSenseEJB/ejbModule/core/entityBeans/Request.java
+END
+Permission.java
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/svn/fullsense.xpdev.svn/!svn/ver/331/FSProjects/FS-beta1/FullSenseEJB/ejbModule/core/entityBeans/Permission.java
+END
+ResourceIdentifier.java
+K 25
+svn:wc:ra_dav:version-url
+V 121
+/svn/fullsense.xpdev.svn/!svn/ver/309/FSProjects/FS-beta1/FullSenseEJB/ejbModule/core/entityBeans/ResourceIdentifier.java
+END
+SystemLogResource.java
+K 25
+svn:wc:ra_dav:version-url
+V 120
+/svn/fullsense.xpdev.svn/!svn/ver/249/FSProjects/FS-beta1/FullSenseEJB/ejbModule/core/entityBeans/SystemLogResource.java
+END

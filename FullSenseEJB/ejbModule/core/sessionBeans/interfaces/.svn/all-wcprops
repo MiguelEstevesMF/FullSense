@@ -1,0 +1,53 @@
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/fullsense.xpdev.svn/!svn/ver/534/FSProjects/FS-beta1/FullSenseEJB/ejbModule/core/sessionBeans/interfaces
+END
+UserBeanLocal.java
+K 25
+svn:wc:ra_dav:version-url
+V 128
+/svn/fullsense.xpdev.svn/!svn/ver/225/FSProjects/FS-beta1/FullSenseEJB/ejbModule/core/sessionBeans/interfaces/UserBeanLocal.java
+END
+UserBeanRemote.java
+K 25
+svn:wc:ra_dav:version-url
+V 129
+/svn/fullsense.xpdev.svn/!svn/ver/517/FSProjects/FS-beta1/FullSenseEJB/ejbModule/core/sessionBeans/interfaces/UserBeanRemote.java
+END
+LogBeanLocal.java
+K 25
+svn:wc:ra_dav:version-url
+V 127
+/svn/fullsense.xpdev.svn/!svn/ver/318/FSProjects/FS-beta1/FullSenseEJB/ejbModule/core/sessionBeans/interfaces/LogBeanLocal.java
+END
+LogBeanRemote.java
+K 25
+svn:wc:ra_dav:version-url
+V 128
+/svn/fullsense.xpdev.svn/!svn/ver/445/FSProjects/FS-beta1/FullSenseEJB/ejbModule/core/sessionBeans/interfaces/LogBeanRemote.java
+END
+ResourceBeanLocal.java
+K 25
+svn:wc:ra_dav:version-url
+V 132
+/svn/fullsense.xpdev.svn/!svn/ver/226/FSProjects/FS-beta1/FullSenseEJB/ejbModule/core/sessionBeans/interfaces/ResourceBeanLocal.java
+END
+ResourceBeanRemote.java
+K 25
+svn:wc:ra_dav:version-url
+V 133
+/svn/fullsense.xpdev.svn/!svn/ver/443/FSProjects/FS-beta1/FullSenseEJB/ejbModule/core/sessionBeans/interfaces/ResourceBeanRemote.java
+END
+DetectorBeanLocal.java
+K 25
+svn:wc:ra_dav:version-url
+V 132
+/svn/fullsense.xpdev.svn/!svn/ver/314/FSProjects/FS-beta1/FullSenseEJB/ejbModule/core/sessionBeans/interfaces/DetectorBeanLocal.java
+END
+DetectorBeanRemote.java
+K 25
+svn:wc:ra_dav:version-url
+V 133
+/svn/fullsense.xpdev.svn/!svn/ver/534/FSProjects/FS-beta1/FullSenseEJB/ejbModule/core/sessionBeans/interfaces/DetectorBeanRemote.java
+END

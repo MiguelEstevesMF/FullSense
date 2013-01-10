@@ -1,0 +1,37 @@
+10
+
+dir
+535
+http://svn.xp-dev.com/svn/fullsense.xpdev.svn/FSProjects/FS-beta1/FullSenseEJB/ejbModule/plugins
+http://svn.xp-dev.com/svn/fullsense.xpdev.svn
+
+
+
+2010-02-19T21:03:51.280497Z
+440
+fullsense.xpdev
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+06b7dfd4-1fc3-4795-9ce2-53ae892dded1
+
+entityBeans
+dir
+
+sessionBeans
+dir
+
+util
+dir
+

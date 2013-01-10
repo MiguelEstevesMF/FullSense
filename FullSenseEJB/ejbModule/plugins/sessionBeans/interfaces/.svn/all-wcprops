@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svn/fullsense.xpdev.svn/!svn/ver/391/FSProjects/FS-beta1/FullSenseEJB/ejbModule/plugins/sessionBeans/interfaces
+END
+BehaviorBeanLocal.java
+K 25
+svn:wc:ra_dav:version-url
+V 135
+/svn/fullsense.xpdev.svn/!svn/ver/226/FSProjects/FS-beta1/FullSenseEJB/ejbModule/plugins/sessionBeans/interfaces/BehaviorBeanLocal.java
+END
+BehaviorBeanRemote.java
+K 25
+svn:wc:ra_dav:version-url
+V 136
+/svn/fullsense.xpdev.svn/!svn/ver/319/FSProjects/FS-beta1/FullSenseEJB/ejbModule/plugins/sessionBeans/interfaces/BehaviorBeanRemote.java
+END
+PluginCoreBeanLocal.java
+K 25
+svn:wc:ra_dav:version-url
+V 137
+/svn/fullsense.xpdev.svn/!svn/ver/377/FSProjects/FS-beta1/FullSenseEJB/ejbModule/plugins/sessionBeans/interfaces/PluginCoreBeanLocal.java
+END
+SignalSensorBeanLocal.java
+K 25
+svn:wc:ra_dav:version-url
+V 139
+/svn/fullsense.xpdev.svn/!svn/ver/373/FSProjects/FS-beta1/FullSenseEJB/ejbModule/plugins/sessionBeans/interfaces/SignalSensorBeanLocal.java
+END
+PluginCoreBeanRemote.java
+K 25
+svn:wc:ra_dav:version-url
+V 138
+/svn/fullsense.xpdev.svn/!svn/ver/391/FSProjects/FS-beta1/FullSenseEJB/ejbModule/plugins/sessionBeans/interfaces/PluginCoreBeanRemote.java
+END
+SignalSensorBeanRemote.java
+K 25
+svn:wc:ra_dav:version-url
+V 140
+/svn/fullsense.xpdev.svn/!svn/ver/374/FSProjects/FS-beta1/FullSenseEJB/ejbModule/plugins/sessionBeans/interfaces/SignalSensorBeanRemote.java
+END

@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions targetNamespace="http://src" xmlns:apachesoap="http://xml.apache.org/xml-soap" xmlns:impl="http://src" xmlns:intf="http://src" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<!--WSDL created by Apache Axis version: 1.4
+Built on Apr 22, 2006 (06:55:48 PDT)-->
+ <wsdl:types>
+  <schema elementFormDefault="qualified" targetNamespace="http://src" xmlns="http://www.w3.org/2001/XMLSchema">
+   <element name="getSightings">
+    <complexType/>
+   </element>
+   <element name="getSightingsResponse">
+    <complexType>
+     <sequence>
+      <element name="getSightingsReturn" type="impl:Event"/>
+     </sequence>
+    </complexType>
+   </element>
+   <complexType name="Event">
+    <sequence>
+     <element name="deviceAddress" nillable="true" type="xsd:string"/>
+     <element name="deviceName" nillable="true" type="xsd:string"/>
+    </sequence>
+   </complexType>
+   <element name="getSightings2">
+    <complexType/>
+   </element>
+   <element name="getSightings2Response">
+    <complexType>
+     <sequence>
+      <element name="getSightings2Return" type="impl:Event"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="addScanning">
+    <complexType>
+     <sequence>
+      <element name="scannerId" type="xsd:string"/>
+      <element name="scanningReportTime" type="xsd:string"/>
+      <element maxOccurs="unbounded" name="eventList" type="impl:Event"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="addScanningResponse">
+    <complexType>
+     <sequence>
+      <element name="addScanningReturn" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+  </schema>
+ </wsdl:types>
+
+   <wsdl:message name="addScanningRequest">
+
+      <wsdl:part element="impl:addScanning" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="getSightings2Request">
+
+      <wsdl:part element="impl:getSightings2" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="getSightings2Response">
+
+      <wsdl:part element="impl:getSightings2Response" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="addScanningResponse">
+
+      <wsdl:part element="impl:addScanningResponse" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="getSightingsResponse">
+
+      <wsdl:part element="impl:getSightingsResponse" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="getSightingsRequest">
+
+      <wsdl:part element="impl:getSightings" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:portType name="BlueTooth">
+
+      <wsdl:operation name="getSightings">
+
+         <wsdl:input message="impl:getSightingsRequest" name="getSightingsRequest"/>
+
+         <wsdl:output message="impl:getSightingsResponse" name="getSightingsResponse"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getSightings2">
+
+         <wsdl:input message="impl:getSightings2Request" name="getSightings2Request"/>
+
+         <wsdl:output message="impl:getSightings2Response" name="getSightings2Response"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="addScanning">
+
+         <wsdl:input message="impl:addScanningRequest" name="addScanningRequest"/>
+
+         <wsdl:output message="impl:addScanningResponse" name="addScanningResponse"/>
+
+      </wsdl:operation>
+
+   </wsdl:portType>
+
+   <wsdl:binding name="BlueToothSoapBinding" type="impl:BlueTooth">
+
+      <wsdlsoap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+
+      <wsdl:operation name="getSightings">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getSightingsRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getSightingsResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getSightings2">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getSightings2Request">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getSightings2Response">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="addScanning">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="addScanningRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="addScanningResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+   </wsdl:binding>
+
+   <wsdl:service name="BlueToothService">
+
+      <wsdl:port binding="impl:BlueToothSoapBinding" name="BlueTooth">
+
+         <wsdlsoap:address location="http://mes2.di.uminho.pt:8088/WebService/services/BlueTooth"/>
+
+      </wsdl:port>
+
+   </wsdl:service>
+
+</wsdl:definitions>

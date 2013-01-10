@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions targetNamespace="http://src" xmlns:apachesoap="http://xml.apache.org/xml-soap" xmlns:impl="http://src" xmlns:intf="http://src" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<!--WSDL created by Apache Axis version: 1.4
+Built on Apr 22, 2006 (06:55:48 PDT)-->
+ <wsdl:types>
+  <schema elementFormDefault="qualified" targetNamespace="http://src" xmlns="http://www.w3.org/2001/XMLSchema">
+   <element name="newInput">
+    <complexType>
+     <sequence>
+      <element name="receiverId" type="xsd:string"/>
+      <element name="inputTime" type="xsd:string"/>
+      <element name="serialNumber" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="newInputResponse">
+    <complexType>
+     <sequence>
+      <element name="newInputReturn" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="teste">
+    <complexType/>
+   </element>
+   <element name="testeResponse">
+    <complexType>
+     <sequence>
+      <element name="testeReturn" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+  </schema>
+ </wsdl:types>
+
+   <wsdl:message name="testeResponse">
+
+      <wsdl:part element="impl:testeResponse" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="newInputRequest">
+
+      <wsdl:part element="impl:newInput" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="newInputResponse">
+
+      <wsdl:part element="impl:newInputResponse" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="testeRequest">
+
+      <wsdl:part element="impl:teste" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:portType name="RFID">
+
+      <wsdl:operation name="newInput">
+
+         <wsdl:input message="impl:newInputRequest" name="newInputRequest"/>
+
+         <wsdl:output message="impl:newInputResponse" name="newInputResponse"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="teste">
+
+         <wsdl:input message="impl:testeRequest" name="testeRequest"/>
+
+         <wsdl:output message="impl:testeResponse" name="testeResponse"/>
+
+      </wsdl:operation>
+
+   </wsdl:portType>
+
+   <wsdl:binding name="RFIDSoapBinding" type="impl:RFID">
+
+      <wsdlsoap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+
+      <wsdl:operation name="newInput">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="newInputRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="newInputResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="teste">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="testeRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="testeResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+   </wsdl:binding>
+
+   <wsdl:service name="RFIDService">
+
+      <wsdl:port binding="impl:RFIDSoapBinding" name="RFID">
+
+         <wsdlsoap:address location="http://localhost:8080/WSProject/services/RFID"/>
+
+      </wsdl:port>
+
+   </wsdl:service>
+
+</wsdl:definitions>

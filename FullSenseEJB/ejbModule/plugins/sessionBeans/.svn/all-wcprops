@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/fullsense.xpdev.svn/!svn/ver/440/FSProjects/FS-beta1/FullSenseEJB/ejbModule/plugins/sessionBeans
+END
+BehaviorBean.java
+K 25
+svn:wc:ra_dav:version-url
+V 119
+/svn/fullsense.xpdev.svn/!svn/ver/401/FSProjects/FS-beta1/FullSenseEJB/ejbModule/plugins/sessionBeans/BehaviorBean.java
+END
+PluginCoreBean.java
+K 25
+svn:wc:ra_dav:version-url
+V 121
+/svn/fullsense.xpdev.svn/!svn/ver/440/FSProjects/FS-beta1/FullSenseEJB/ejbModule/plugins/sessionBeans/PluginCoreBean.java
+END
+SignalSensorBean.java
+K 25
+svn:wc:ra_dav:version-url
+V 123
+/svn/fullsense.xpdev.svn/!svn/ver/374/FSProjects/FS-beta1/FullSenseEJB/ejbModule/plugins/sessionBeans/SignalSensorBean.java
+END

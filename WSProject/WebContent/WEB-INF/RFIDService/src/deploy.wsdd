@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?><!-- Use this file to deploy some handlers/chains and services      --><!-- Two ways to do this:                                           --><!--   java org.apache.axis.client.AdminClient deploy.wsdd          --><!--      after the axis server is running                          --><!-- or                                                             --><!--   java org.apache.axis.utils.Admin client|server deploy.wsdd   --><!--      from the same directory that the Axis engine runs         --><deployment xmlns="http://xml.apache.org/axis/wsdd/" xmlns:java="http://xml.apache.org/axis/wsdd/providers/java">
+
+  <!-- Services from RFIDService WSDL service -->
+
+  <service name="RFID" provider="java:RPC" style="wrapped" use="literal">
+      <parameter name="wsdlTargetNamespace" value="http://src"/>
+      <parameter name="wsdlServiceElement" value="RFIDService"/>
+      <parameter name="schemaQualified" value="http://src"/>
+      <parameter name="wsdlServicePort" value="RFID"/>
+      <parameter name="className" value="src.RFID"/>
+      <parameter name="wsdlPortType" value="RFID"/>
+      <parameter name="typeMappingVersion" value="1.2"/>
+      <operation xmlns:operNS="http://src" xmlns:retNS="http://src" xmlns:rtns="http://www.w3.org/2001/XMLSchema" name="newInput" qname="operNS:newInput" returnQName="retNS:newInputReturn" returnType="rtns:string" soapAction="">
+        <parameter xmlns:pns="http://src" xmlns:tns="http://www.w3.org/2001/XMLSchema" qname="pns:receiverId" type="tns:string"/>
+        <parameter xmlns:pns="http://src" xmlns:tns="http://www.w3.org/2001/XMLSchema" qname="pns:inputTime" type="tns:string"/>
+        <parameter xmlns:pns="http://src" xmlns:tns="http://www.w3.org/2001/XMLSchema" qname="pns:serialNumber" type="tns:string"/>
+      </operation>
+      <operation xmlns:operNS="http://src" xmlns:retNS="http://src" xmlns:rtns="http://www.w3.org/2001/XMLSchema" name="teste" qname="operNS:teste" returnQName="retNS:testeReturn" returnType="rtns:string" soapAction="">
+      </operation>
+      <parameter name="allowedMethods" value="newInput teste"/>
+
+  </service>
+</deployment>

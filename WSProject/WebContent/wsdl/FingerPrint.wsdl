@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions targetNamespace="http://src" xmlns:apachesoap="http://xml.apache.org/xml-soap" xmlns:impl="http://src" xmlns:intf="http://src" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<!--WSDL created by Apache Axis version: 1.4
+Built on Apr 22, 2006 (06:55:48 PDT)-->
+ <wsdl:types>
+  <schema elementFormDefault="qualified" targetNamespace="http://src" xmlns="http://www.w3.org/2001/XMLSchema">
+   <element name="registEvent">
+    <complexType>
+     <sequence>
+      <element name="date" type="xsd:string"/>
+      <element name="hardwareId" type="xsd:string"/>
+      <element name="personId" type="xsd:string"/>
+      <element name="eventDescription" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="registEventResponse">
+    <complexType>
+     <sequence>
+      <element name="registEventReturn" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="verifyAccess">
+    <complexType>
+     <sequence>
+      <element name="hardwareId" type="xsd:string"/>
+      <element name="personId" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="verifyAccessResponse">
+    <complexType>
+     <sequence>
+      <element name="verifyAccessReturn" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="addAccess">
+    <complexType>
+     <sequence>
+      <element name="date" type="xsd:string"/>
+      <element name="hardwareId" type="xsd:string"/>
+      <element name="personId" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="addAccessResponse">
+    <complexType>
+     <sequence>
+      <element name="addAccessReturn" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="removeAccess">
+    <complexType>
+     <sequence>
+      <element name="date" type="xsd:string"/>
+      <element name="hardwareId" type="xsd:string"/>
+      <element name="personId" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="removeAccessResponse">
+    <complexType>
+     <sequence>
+      <element name="removeAccessReturn" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+  </schema>
+ </wsdl:types>
+
+   <wsdl:message name="addAccessResponse">
+
+      <wsdl:part element="impl:addAccessResponse" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="registEventResponse">
+
+      <wsdl:part element="impl:registEventResponse" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="addAccessRequest">
+
+      <wsdl:part element="impl:addAccess" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="removeAccessRequest">
+
+      <wsdl:part element="impl:removeAccess" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="verifyAccessRequest">
+
+      <wsdl:part element="impl:verifyAccess" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="registEventRequest">
+
+      <wsdl:part element="impl:registEvent" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="removeAccessResponse">
+
+      <wsdl:part element="impl:removeAccessResponse" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="verifyAccessResponse">
+
+      <wsdl:part element="impl:verifyAccessResponse" name="parameters"/>
+
+   </wsdl:message>
+
+   <wsdl:portType name="FingerPrint">
+
+      <wsdl:operation name="registEvent">
+
+         <wsdl:input message="impl:registEventRequest" name="registEventRequest"/>
+
+         <wsdl:output message="impl:registEventResponse" name="registEventResponse"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="verifyAccess">
+
+         <wsdl:input message="impl:verifyAccessRequest" name="verifyAccessRequest"/>
+
+         <wsdl:output message="impl:verifyAccessResponse" name="verifyAccessResponse"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="addAccess">
+
+         <wsdl:input message="impl:addAccessRequest" name="addAccessRequest"/>
+
+         <wsdl:output message="impl:addAccessResponse" name="addAccessResponse"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="removeAccess">
+
+         <wsdl:input message="impl:removeAccessRequest" name="removeAccessRequest"/>
+
+         <wsdl:output message="impl:removeAccessResponse" name="removeAccessResponse"/>
+
+      </wsdl:operation>
+
+   </wsdl:portType>
+
+   <wsdl:binding name="FingerPrintSoapBinding" type="impl:FingerPrint">
+
+      <wsdlsoap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+
+      <wsdl:operation name="registEvent">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="registEventRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="registEventResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="verifyAccess">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="verifyAccessRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="verifyAccessResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="addAccess">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="addAccessRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="addAccessResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="removeAccess">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="removeAccessRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="removeAccessResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+   </wsdl:binding>
+
+   <wsdl:service name="FingerPrintService">
+
+      <wsdl:port binding="impl:FingerPrintSoapBinding" name="FingerPrint">
+
+         <wsdlsoap:address location="http://localhost:8080/WSProject/services/FingerPrint"/>
+
+      </wsdl:port>
+
+   </wsdl:service>
+
+</wsdl:definitions>

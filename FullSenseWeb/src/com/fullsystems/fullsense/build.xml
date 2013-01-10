@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<project name="ImageViewer" default="all" basedir="/Users/luis/Documents/workspace/FullSenseWeb">
+	<description>
+		This is build file for GWT module 'com.fullsystems.fullsense.FullSenseWeb' deployment.
+		GWT Designer generates it each time when you initiate deployment.
+		
+		You can use this file later for manual deployment, but keep in mind, that
+		classpath is hardcoded in it, so after changes in classpath you should
+		regenerate build file.
+	</description>
+
+	<property name="gwt.home" value="/Applications/eclipse/plugins/com.google.gwt.eclipse.sdkbundle.macosx_1.7.1.v200909221731/gwt-mac-1.7.1" />
+	<property name="gwt.module.id" value="com.fullsystems.fullsense.FullSenseWeb" />
+	<property name="war.name" value="FullSenseWeb.war" />
+
+	<target name="jars" description="Package up the module project and required projects as jars">
+		<mkdir dir="war/WEB-INF/lib" />
+		<!--=== FullSenseWeb ===-->
+		<jar destfile='war/WEB-INF/lib/FullSenseWeb.jar'>
+			<fileset dir="/Users/luis/Documents/workspace/FullSenseWeb/src">
+				<include name="**"/>
+			</fileset>
+			<fileset dir="/Users/luis/Documents/workspace/FullSenseWeb/war/WEB-INF/classes">
+				<include name="**/*.class"/>
+			</fileset>
+		</jar>
+		<copy todir='war/WEB-INF/lib'>
+			<fileset file="/Users/luis/Documents/workspace/FullSenseWeb/gxt.jar"/>
+			<fileset file="/Users/luis/Downloads/eclipse/plugins/com.google.gwt.eclipse.sdkbundle.macosx_1.7.1.v200909221731/gwt-mac-1.7.1/gwt-dev-mac.jar"/>
+		</copy>		
+	</target>
+
+	<target name="gwt-compile" description="Compile to JavaScript">
+		<java classname="com.google.gwt.dev.Compiler" fork="yes" failonerror="true" maxmemory="256m">
+			<classpath>
+				<pathelement location="/Users/luis/Documents/workspace/FullSenseWeb/src" />
+				<pathelement location="/Users/luis/Documents/workspace/FullSenseWeb/war/WEB-INF/classes" />
+				<pathelement location="/Applications/eclipse/plugins/com.google.gwt.eclipse.sdkbundle.macosx_1.7.1.v200909221731/gwt-mac-1.7.1/gwt-user.jar" />
+				<pathelement location="/Users/luis/Documents/workspace/FullSenseWeb/gxt.jar" />
+				<pathelement location="/Users/luis/Downloads/eclipse/plugins/com.google.gwt.eclipse.sdkbundle.macosx_1.7.1.v200909221731/gwt-mac-1.7.1/gwt-user.jar" />
+				<pathelement location="/Users/luis/Downloads/eclipse/plugins/com.google.gwt.eclipse.sdkbundle.macosx_1.7.1.v200909221731/gwt-mac-1.7.1/gwt-dev-mac.jar" />
+				<pathelement location="/Applications/eclipse/plugins/com.google.gwt.eclipse.sdkbundle.macosx_1.7.1.v200909221731/gwt-mac-1.7.1/gwt-dev-mac.jar" />
+			</classpath>
+			<arg value="-style"/>
+			<arg value="OBFUSCATED"/>
+			<arg value="${gwt.module.id}" />
+		</java>
+	</target>
+
+	<target name="war" depends="gwt-compile, jars">
+		<delete file="${war.name}" />
+		<jar destfile="${war.name}" basedir="war" duplicate="preserve" />
+	</target>
+	
+	<target name="deploy" depends="war">
+		<move file="${war.name}" todir="/Users/luis/Desktop" />
+	</target>
+
+	<target name="all" depends="deploy" />
+
+</project>

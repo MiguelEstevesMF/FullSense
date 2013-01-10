@@ -1,0 +1,76 @@
+10
+
+dir
+256
+http://svn.xp-dev.com/svn/fullsense.xpdev.svn/FSProjects/FS-beta1/FullSenseEJB/ejbModule
+http://svn.xp-dev.com/svn/fullsense.xpdev.svn
+
+
+
+2010-02-11T18:35:06.799172Z
+256
+fullsense.xpdev
+has-props
+has-prop-mods
+
+
+dir_conflicts.prej
+
+
+
+
+
+
+
+
+
+06b7dfd4-1fc3-4795-9ce2-53ae892dded1
+
+
+
+
+
+
+
+
+((conflict fullsenseejb dir update deleted edited (version http://svn.xp-dev.com/svn/fullsense.xpdev.svn 3 201 FSProjects/FS-beta1/FullSenseEJB/ejbModule/fullsenseejb dir) (version http://svn.xp-dev.com/svn/fullsense.xpdev.svn 3 202 FSProjects/FS-beta1/FullSenseEJB/ejbModule/fullsenseejb none)) (conflict META-INF dir update edited deleted (version http://svn.xp-dev.com/svn/fullsense.xpdev.svn 3 210 FSProjects/FS-beta1/FullSenseEJB/ejbModule/META-INF none) (version http://svn.xp-dev.com/svn/fullsense.xpdev.svn 3 224 FSProjects/FS-beta1/FullSenseEJB/ejbModule/META-INF dir)))
+
+test
+dir
+
+META-INF
+dir
+
+
+
+delete
+
+fullsenseejb
+dir
+
+
+
+add
+
+
+
+
+
+
+
+
+
+
+
+
+
+copied
+http://svn.xp-dev.com/svn/fullsense.xpdev.svn/FSProjects/FS-beta1/FullSenseEJB/ejbModule/fullsenseejb
+201
+
+plugins
+dir
+
+core
+dir
+

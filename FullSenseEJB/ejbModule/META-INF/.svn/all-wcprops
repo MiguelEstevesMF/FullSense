@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/fullsense.xpdev.svn/!svn/ver/213/FSProjects/FS-beta1/FullSenseEJB/ejbModule/META-INF
+END
+persistence.xml
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/fullsense.xpdev.svn/!svn/ver/115/FSProjects/FS-beta1/FullSenseEJB/ejbModule/META-INF/persistence.xml
+END
+MANIFEST.MF
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/fullsense.xpdev.svn/!svn/ver/12/FSProjects/FS-beta1/FullSenseEJB/ejbModule/META-INF/MANIFEST.MF
+END
+orm.xml
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/fullsense.xpdev.svn/!svn/ver/60/FSProjects/FS-beta1/FullSenseEJB/ejbModule/META-INF/orm.xml
+END

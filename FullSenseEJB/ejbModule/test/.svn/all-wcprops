@@ -1,0 +1,47 @@
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/fullsense.xpdev.svn/!svn/ver/506/FSProjects/FS-beta1/FullSenseEJB/ejbModule/test
+END
+CrudBeanRemote.java
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/fullsense.xpdev.svn/!svn/ver/483/FSProjects/FS-beta1/FullSenseEJB/ejbModule/test/CrudBeanRemote.java
+END
+DetectorBeanTest.java
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/fullsense.xpdev.svn/!svn/ver/378/FSProjects/FS-beta1/FullSenseEJB/ejbModule/test/DetectorBeanTest.java
+END
+CrudBean.java
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/fullsense.xpdev.svn/!svn/ver/483/FSProjects/FS-beta1/FullSenseEJB/ejbModule/test/CrudBean.java
+END
+MyInjector.java
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/fullsense.xpdev.svn/!svn/ver/376/FSProjects/FS-beta1/FullSenseEJB/ejbModule/test/MyInjector.java
+END
+UserBeanTest.java
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn/fullsense.xpdev.svn/!svn/ver/376/FSProjects/FS-beta1/FullSenseEJB/ejbModule/test/UserBeanTest.java
+END
+LogBeanTest.java
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/fullsense.xpdev.svn/!svn/ver/378/FSProjects/FS-beta1/FullSenseEJB/ejbModule/test/LogBeanTest.java
+END
+BundlePopulateData.java
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/fullsense.xpdev.svn/!svn/ver/506/FSProjects/FS-beta1/FullSenseEJB/ejbModule/test/BundlePopulateData.java
+END

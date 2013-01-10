@@ -1,0 +1,116 @@
+<ns1:deployment xmlns="http://xml.apache.org/axis/wsdd/" xmlns:java="http://xml.apache.org/axis/wsdd/providers/java" xmlns:ns1="http://xml.apache.org/axis/wsdd/">
+ <ns1:globalConfiguration>
+  <ns1:parameter name="sendMultiRefs" value="true"/>
+  <ns1:parameter name="disablePrettyXML" value="true"/>
+  <ns1:parameter name="adminPassword" value="admin"/>
+  <ns1:parameter name="attachments.Directory" value="/home/matheus/workspace/.metadata/.plugins/org.jboss.ide.eclipse.as.core/JBoss_5.1_Server/deploy/WSProjectEAR.ear/WSProject.war/WEB-INF/attachments"/>
+  <ns1:parameter name="dotNetSoapEncFix" value="true"/>
+  <ns1:parameter name="enableNamespacePrefixOptimization" value="false"/>
+  <ns1:parameter name="sendXMLDeclaration" value="true"/>
+  <ns1:parameter name="attachments.implementation" value="org.apache.axis.attachments.AttachmentsImpl"/>
+  <ns1:parameter name="sendXsiTypes" value="true"/>
+  <ns1:requestFlow>
+   <ns1:handler type="java:org.apache.axis.handlers.JWSHandler">
+    <ns1:parameter name="scope" value="session"/>
+   </ns1:handler>
+   <ns1:handler type="java:org.apache.axis.handlers.JWSHandler">
+    <ns1:parameter name="scope" value="request"/>
+    <ns1:parameter name="extension" value=".jwr"/>
+   </ns1:handler>
+  </ns1:requestFlow>
+ </ns1:globalConfiguration>
+ <ns1:handler name="URLMapper" type="java:org.apache.axis.handlers.http.URLMapper"/>
+ <ns1:handler name="LocalResponder" type="java:org.apache.axis.transport.local.LocalResponder"/>
+ <ns1:handler name="Authenticate" type="java:org.apache.axis.handlers.SimpleAuthenticationHandler"/>
+ <ns1:service name="RFID" provider="java:RPC" style="wrapped" use="literal">
+  <ns2:operation name="newInput" qname="ns1:newInput" returnQName="ns1:newInputReturn" returnType="xsd:string" soapAction="" xmlns:ns1="http://src" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:ns2="http://xml.apache.org/axis/wsdd/">
+   <ns2:parameter qname="ns1:receiverId" type="xsd:string"/>
+   <ns2:parameter qname="ns1:inputTime" type="xsd:string"/>
+   <ns2:parameter qname="ns1:serialNumber" type="xsd:string"/>
+  </ns2:operation>
+  <ns1:operation name="teste" qname="ns2:teste" returnQName="ns2:testeReturn" returnType="xsd:string" soapAction="" xmlns:ns2="http://src" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+  <ns1:parameter name="allowedMethods" value="newInput teste"/>
+  <ns1:parameter name="typeMappingVersion" value="1.2"/>
+  <ns1:parameter name="wsdlPortType" value="RFID"/>
+  <ns1:parameter name="className" value="src.RFID"/>
+  <ns1:parameter name="wsdlServicePort" value="RFID"/>
+  <ns1:parameter name="schemaQualified" value="http://src"/>
+  <ns1:parameter name="wsdlTargetNamespace" value="http://src"/>
+  <ns1:parameter name="wsdlServiceElement" value="RFIDService"/>
+ </ns1:service>
+ <ns1:service name="FingerPrint" provider="java:RPC" style="wrapped" use="literal">
+  <ns1:operation name="registEvent" qname="ns3:registEvent" returnQName="ns3:registEventReturn" returnType="xsd:string" soapAction="" xmlns:ns3="http://src" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+   <ns1:parameter qname="ns3:date" type="xsd:string"/>
+   <ns1:parameter qname="ns3:hardwareId" type="xsd:string"/>
+   <ns1:parameter qname="ns3:personId" type="xsd:string"/>
+   <ns1:parameter qname="ns3:eventDescription" type="xsd:string"/>
+  </ns1:operation>
+  <ns1:operation name="verifyAccess" qname="ns4:verifyAccess" returnQName="ns4:verifyAccessReturn" returnType="xsd:string" soapAction="" xmlns:ns4="http://src" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+   <ns1:parameter qname="ns4:hardwareId" type="xsd:string"/>
+   <ns1:parameter qname="ns4:personId" type="xsd:string"/>
+  </ns1:operation>
+  <ns1:operation name="addAccess" qname="ns5:addAccess" returnQName="ns5:addAccessReturn" returnType="xsd:string" soapAction="" xmlns:ns5="http://src" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+   <ns1:parameter qname="ns5:date" type="xsd:string"/>
+   <ns1:parameter qname="ns5:hardwareId" type="xsd:string"/>
+   <ns1:parameter qname="ns5:personId" type="xsd:string"/>
+  </ns1:operation>
+  <ns1:operation name="removeAccess" qname="ns6:removeAccess" returnQName="ns6:removeAccessReturn" returnType="xsd:string" soapAction="" xmlns:ns6="http://src" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+   <ns1:parameter qname="ns6:date" type="xsd:string"/>
+   <ns1:parameter qname="ns6:hardwareId" type="xsd:string"/>
+   <ns1:parameter qname="ns6:personId" type="xsd:string"/>
+  </ns1:operation>
+  <ns1:parameter name="allowedMethods" value="removeAccess addAccess registEvent verifyAccess"/>
+  <ns1:parameter name="wsdlPortType" value="FingerPrint"/>
+  <ns1:parameter name="typeMappingVersion" value="1.2"/>
+  <ns1:parameter name="schemaQualified" value="http://src"/>
+  <ns1:parameter name="wsdlServicePort" value="FingerPrint"/>
+  <ns1:parameter name="className" value="src.FingerPrint"/>
+  <ns1:parameter name="wsdlTargetNamespace" value="http://src"/>
+  <ns1:parameter name="wsdlServiceElement" value="FingerPrintService"/>
+ </ns1:service>
+ <ns1:service name="AdminService" provider="java:MSG">
+  <ns1:parameter name="allowedMethods" value="AdminService"/>
+  <ns1:parameter name="enableRemoteAdmin" value="false"/>
+  <ns1:parameter name="className" value="org.apache.axis.utils.Admin"/>
+  <ns1:namespace>http://xml.apache.org/axis/wsdd/</ns1:namespace>
+ </ns1:service>
+ <ns1:service name="Version" provider="java:RPC">
+  <ns1:parameter name="allowedMethods" value="getVersion"/>
+  <ns1:parameter name="className" value="org.apache.axis.Version"/>
+ </ns1:service>
+ <ns1:service name="BlueTooth" provider="java:RPC" style="wrapped" use="literal">
+  <ns1:operation name="getSightings" qname="ns7:getSightings" returnQName="ns7:getSightingsReturn" returnType="ns7:Event" soapAction="" xmlns:ns7="http://src"/>
+  <ns1:operation name="getSightings2" qname="ns8:getSightings2" returnQName="ns8:getSightings2Return" returnType="ns8:Event" soapAction="" xmlns:ns8="http://src"/>
+  <ns1:operation name="addScanning" qname="ns9:addScanning" returnQName="ns9:addScanningReturn" returnType="xsd:string" soapAction="" xmlns:ns9="http://src" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+   <ns1:parameter qname="ns9:scannerId" type="xsd:string"/>
+   <ns1:parameter qname="ns9:scanningReportTime" type="xsd:string"/>
+   <ns1:parameter qname="ns9:eventList" type="ns9:Event"/>
+  </ns1:operation>
+  <ns1:parameter name="allowedMethods" value="addScanning getSightings getSightings2"/>
+  <ns1:parameter name="typeMappingVersion" value="1.2"/>
+  <ns1:parameter name="wsdlPortType" value="BlueTooth"/>
+  <ns1:parameter name="className" value="src.BlueTooth"/>
+  <ns1:parameter name="wsdlServicePort" value="BlueTooth"/>
+  <ns1:parameter name="schemaQualified" value="http://src"/>
+  <ns1:parameter name="wsdlTargetNamespace" value="http://src"/>
+  <ns1:parameter name="wsdlServiceElement" value="BlueToothService"/>
+  <ns1:typeMapping deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory" encodingStyle="" qname="ns10:Event" serializer="org.apache.axis.encoding.ser.BeanSerializerFactory" type="java:src.Event" xmlns:ns10="http://src"/>
+ </ns1:service>
+ <ns1:transport name="http">
+  <ns1:requestFlow>
+   <ns1:handler type="URLMapper"/>
+   <ns1:handler type="java:org.apache.axis.handlers.http.HTTPAuthHandler"/>
+  </ns1:requestFlow>
+  <ns1:parameter name="qs:list" value="org.apache.axis.transport.http.QSListHandler"/>
+  <ns1:parameter name="qs:wsdl" value="org.apache.axis.transport.http.QSWSDLHandler"/>
+  <ns1:parameter name="qs.list" value="org.apache.axis.transport.http.QSListHandler"/>
+  <ns1:parameter name="qs.method" value="org.apache.axis.transport.http.QSMethodHandler"/>
+  <ns1:parameter name="qs:method" value="org.apache.axis.transport.http.QSMethodHandler"/>
+  <ns1:parameter name="qs.wsdl" value="org.apache.axis.transport.http.QSWSDLHandler"/>
+ </ns1:transport>
+ <ns1:transport name="local">
+  <ns1:responseFlow>
+   <ns1:handler type="LocalResponder"/>
+  </ns1:responseFlow>
+ </ns1:transport>
+</ns1:deployment>
